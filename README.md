@@ -444,31 +444,6 @@ además `numpy`/`scipy` para aislar el motivo principal del icono en los
 tamaños pequeños; son opcionales y solo hacen falta para regenerar los
 assets, no para ejecutar el programa.
 
-## Icono del programa
-
-`docs/clean.png` es el original que aporta el Archivo (a la máxima resolución
-disponible). `tools/generar_icono.py` lo convierte en los tres archivos que
-usa la aplicación, guardados en `assets/` (a diferencia del vocabulario, estos
-SÍ se suben al repositorio: son recursos de interfaz pequeños que no cambian
-en cada ejecución):
-
-```bash
-python tools/generar_icono.py --origen docs/clean.png
-```
-
-Genera `assets/icona.png` (recorte a máxima resolución), `assets/icona_64.png`
-(variante para el banner) e `assets/icona.ico` (multirresolución de Windows:
-16/32/48/64/128/256 px en un solo archivo). Si el PNG de origen no tiene
-transparencia real —pasó con la primera entrega, con el fondo horneado como
-color sólido en vez de alpha—, el script la extrae por diferencia de color; si
-además trae alguna decoración suelta en una esquina, las variantes pequeñas se
-recortan solo al motivo principal para que seas legibles a 16-64px. Avisa por
-consola si el origen queda por debajo de 512px, el mínimo recomendado para que
-el icono del ejecutable se vea nítido en la vista de iconos grandes de
-Windows.
-
-Si se borra `assets/` (o falta cualquiera de los tres archivos), el programa
-arranca igual, sin icono: nunca es un fallo bloqueante.
 
 ## Empaquetado con PyInstaller
 
