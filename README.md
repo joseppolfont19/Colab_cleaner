@@ -1,13 +1,11 @@
 # Excel Name Cleaner
 
-[![tests](https://github.com/USUARIO/excel-name-cleaner/actions/workflows/tests.yml/badge.svg)](https://github.com/USUARIO/excel-name-cleaner/actions/workflows/tests.yml)
 
 Corrector tipográfico para tablas de nombres transcritos a una hoja de cálculo.
 Detecta variantes erróneas de un mismo nombre o apellido y las propone al usuario
 una por una, sin tocar nada sin confirmación. Admite **Excel (`.xlsx`) y
 LibreOffice/OpenOffice (`.ods`)**.
 
-![Captura de la aplicación](docs/captura.png)
 
 ---
 
